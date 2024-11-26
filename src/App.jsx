@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Sidebar from "./Components/Sidebar"; // Chemin vers ton composant
+import "./index.css";
+import Sidebar from "./Components/Sidebar";
 
 function App() {
   return (
