@@ -1,10 +1,10 @@
 import React from "react";
 
 type ProfileCardProps = {
-  name: string;
-  username: string;
-  description: string;
-  imageUrl: string;
+  name: string,
+  username: string,
+  description: string,
+  imageUrl: string,
 };
 
 const ProfileCard: React.FC<ProfileCardProps> = ({

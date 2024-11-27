@@ -2,7 +2,12 @@ import { Search } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const contacts = [
+type Contact = {
+  id: string;
+  name: string;
+};
+
+const contacts: Contact[] = [
   { id: "1", name: "Dennis Beatty" },
   { id: "2", name: "Greg Brimble" },
   { id: "3", name: "Ryan Dahl" },
@@ -16,8 +21,8 @@ const contacts = [
 ];
 
 export default function Sidebar() {
-  const [selectedContact, setSelectedContact] = useState("8");
-  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedContact, setSelectedContact] = useState<string>("8");
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
   const filteredContacts = contacts.filter((contact) =>
     contact.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -34,7 +39,9 @@ export default function Sidebar() {
               type="text"
               placeholder="Search"
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setSearchQuery(e.target.value)
+              }
               className="w-full pl-9 pr-3 py-2 text-sm rounded-lg border border-gray-200 
                        focus:outline-none focus:border-blue-500"
             />
