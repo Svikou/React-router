@@ -18,10 +18,10 @@ function App() {
           path="/profile"
           element={
             <ProfileCard
-              name="Henri Helvetica"
-              username="HenriHelvetica"
-              description="How To WebPageTest"
-              imageUrl="https://via.placeholder.com/150" // Remplacez par l'URL réelle de l'image
+              name="John Doe"
+              username="johndoe"
+              description="Full Stack Developer passionate about coding."
+              imageUrl="https://via.placeholder.com/150"
             />
           }
         />

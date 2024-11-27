@@ -1,18 +1,6 @@
-import React from "react";
+import PropTypes from "prop-types";
 
-type ProfileCardProps = {
-  name: string,
-  username: string,
-  description: string,
-  imageUrl: string,
-};
-
-const ProfileCard: React.FC<ProfileCardProps> = ({
-  name,
-  username,
-  description,
-  imageUrl,
-}) => {
+const ProfileCard = ({ name, username, description, imageUrl }) => {
   return (
     <div className="max-w-sm mx-auto p-4 bg-white rounded-lg shadow-lg border">
       {/* Image */}
@@ -42,6 +30,13 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
       </div>
     </div>
   );
+};
+
+ProfileCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
 };
 
 export default ProfileCard;
