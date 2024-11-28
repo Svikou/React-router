@@ -1,22 +1,31 @@
+import { Star } from "lucide-react";
+
 export default function ProfileCard() {
   return (
-    <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
+    <div className="flex items-start space-x-8 p-6">
       <img
-        src="public/PP.png" // Remplacez par votre image
-        alt="Profil"
-        className="w-24 h-24 rounded-full mx-auto"
+        src="public/PP.png"
+        alt="Profile"
+        className="w-48 h-48 rounded-md object-cover"
       />
-      <h2 className="mt-4 text-center text-xl font-bold">Henri Helvetica</h2>
-      <p className="text-center text-blue-500">HenriHelvetica</p>
-      <p className="mt-2 text-center text-gray-600">How To WebPageTest</p>
+      <div>
+        <div className="flex items-center space-x-2">
+          <h1 className="text-2xl font-bold">Henri Helvetica</h1>
+          <button className="text-gray-400 hover:text-gray-600">
+            <Star className="h-5 w-5" />
+          </button>
+        </div>
+        <p className="text-blue-500 mt-1">HenriHelvetica</p>
+        <p className="text-gray-600 mt-2">How To WebPageTest</p>
 
-      <div className="flex justify-center gap-4 mt-4">
-        <button className="px-4 py-2 text-sm font-medium text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50">
-          Edit
-        </button>
-        <button className="px-4 py-2 text-sm font-medium text-red-600 border border-red-600 rounded-lg hover:bg-red-50">
-          Delete
-        </button>
+        <div className="mt-6 space-x-3">
+          <button className="px-4 py-2 text-sm border border-gray-200 rounded-md hover:bg-gray-50">
+            Edit
+          </button>
+          <button className="px-4 py-2 text-sm text-red-600 border border-gray-200 rounded-md hover:bg-gray-50">
+            Delete
+          </button>
+        </div>
       </div>
     </div>
   );
