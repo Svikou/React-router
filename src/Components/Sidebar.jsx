@@ -15,7 +15,7 @@ export default function Sidebar() {
   ];
 
   return (
-    <div className="w-80 h-full flex flex-col border-r border-gray-200 bg-gray-200">
+    <div className="w-80 h-full flex flex-col border-r border-gray-200 bg-gray">
       {/* Barre de recherche */}
       <div className="p-4 flex items-center border-b border-gray-300">
         <div className="relative flex-1">
@@ -46,7 +46,8 @@ export default function Sidebar() {
         ))}
       </nav>
 
-      <div className="p-4 border-t border-gray-200">
+      <div className="p-4 border-t border-gray-200 flex items-center gap-2">
+        <img src="public/icon.png" alt="Profile" className="w-6 h-6" />
         <div className="text-sm font-medium text-gray-700">
           React Router Contacts
         </div>
