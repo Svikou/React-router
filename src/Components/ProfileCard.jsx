@@ -2,7 +2,7 @@ import { Star } from "lucide-react";
 
 export default function ProfileCard() {
   return (
-    <div className="flex items-start space-x-8 p-6">
+    <div className="flex items-start space-x-8 p-6 mt-10">
       <img
         src="public/PP.png"
         alt="Profile"
