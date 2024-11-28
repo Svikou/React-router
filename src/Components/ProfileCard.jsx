@@ -1,42 +1,23 @@
-import PropTypes from "prop-types";
-
-const ProfileCard = ({ name, username, description, imageUrl }) => {
+export default function ProfileCard() {
   return (
-    <div className="max-w-sm mx-auto p-4 bg-white rounded-lg shadow-lg border">
-      {/* Image */}
-      <div className="flex justify-center mb-4">
-        <img
-          src={imageUrl}
-          alt={name}
-          className="w-24 h-24 rounded-full border-2 border-gray-300 object-cover"
-        />
-      </div>
+    <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
+      <img
+        src="https://via.placeholder.com/150" // Remplacez par votre image
+        alt="Profil"
+        className="w-24 h-24 rounded-full mx-auto"
+      />
+      <h2 className="mt-4 text-center text-xl font-bold">Henri Helvetica</h2>
+      <p className="text-center text-blue-500">HenriHelvetica</p>
+      <p className="mt-2 text-center text-gray-600">How To WebPageTest</p>
 
-      {/* User Info */}
-      <div className="text-center">
-        <h2 className="text-xl font-semibold">{name}</h2>
-        <p className="text-blue-500">@{username}</p>
-        <p className="text-gray-600 mt-2">{description}</p>
-      </div>
-
-      {/* Buttons */}
       <div className="flex justify-center gap-4 mt-4">
-        <button className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+        <button className="px-4 py-2 text-sm font-medium text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50">
           Edit
         </button>
-        <button className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">
+        <button className="px-4 py-2 text-sm font-medium text-red-600 border border-red-600 rounded-lg hover:bg-red-50">
           Delete
         </button>
       </div>
     </div>
   );
-};
-
-ProfileCard.propTypes = {
-  name: PropTypes.string.isRequired,
-  username: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string.isRequired,
-};
-
-export default ProfileCard;
+}
