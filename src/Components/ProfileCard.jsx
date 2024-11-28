@@ -2,7 +2,7 @@ export default function ProfileCard() {
   return (
     <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
       <img
-        src="https://via.placeholder.com/150" // Remplacez par votre image
+        src="public/PP.png" // Remplacez par votre image
         alt="Profil"
         className="w-24 h-24 rounded-full mx-auto"
       />
