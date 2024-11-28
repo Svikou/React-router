@@ -15,9 +15,9 @@ export default function Sidebar() {
   ];
 
   return (
-    <div className="w-80 h-full flex flex-col border-r border-gray-200 bg-white">
+    <div className="w-80 h-full flex flex-col border-r border-gray-200 bg-gray-200">
       {/* Barre de recherche */}
-      <div className="p-4 flex items-center gap-4">
+      <div className="p-4 flex items-center gap-4 border-b border-gray-300">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
           <input
