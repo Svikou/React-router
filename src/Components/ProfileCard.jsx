@@ -10,7 +10,7 @@ export default function ProfileCard() {
       />
       <div>
         <div className="flex items-center space-x-2">
-          <h1 className="text-2xl font-bold">Henri Helvetica</h1>
+          <h1 className="text-3xl font-bold">Henri Helvetica</h1>
           <button className="text-gray-400 hover:text-gray-600">
             <Star className="h-5 w-5" />
           </button>
